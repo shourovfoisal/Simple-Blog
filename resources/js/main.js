@@ -50,4 +50,40 @@ $(document).ready(function() {
 		requestAnimationFrame(slider);
 	}, 4000);
 
+
+
+	/*
+		FUNCTIONS FOR SUB CATEGORY
+	*/
+
+	$('.category-list>li>i').on('click',function() {
+		if($(this).next().hasClass('expanded')){
+
+			$(this).css('transform', 'rotateX(0deg)');
+			if($(this).parent().index())					// INDEX RETURNS TRUE FOR ALL ELEMENTS EXCEPT THE FIRST
+				$(this).parent().removeClass('active');		// WE DON'T WANT TO REMOVE THE ACTIVE CLASS FROM THE FIRST ELEMENT
+			$(this).next().animate({height: '0px'}, 500);
+			$(this).next().removeClass('expanded');
+		}
+		else {
+
+			$(this).css('transform', 'rotateX(180deg)');
+			$(this).parent().addClass('active');
+			var children = $(this).next().children();
+			var len = children.length;						// CALCULATING THE NUMBER OF ELEMENTS THE SUB CATEGORY OWNS
+			var height = (len*40)+15;						// CALCULATING HOW MUCH HEIGHT THE SUB CATEGORY NEEDS IN TOTAL
+			$(this).next().animate({height: +height+'px'}, 500);
+			$(this).next().addClass('expanded');
+		}
+	});
+
+
+
+
+
+
+
+
+
+
 });
