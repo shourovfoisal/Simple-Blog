@@ -1,0 +1,850 @@
+/*
+	MAIN COLOR: #D35400
+	COLOR PALETTE: http://www.0to255.com/D35400
+
+	GOLDEN COLOR: #e4a800
+
+	SEARCH BOX BG: #ecf0f1
+*/
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #fff;
+	color: #555;
+	font-family: 'Oxygen', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	text-rendering: optimizeLegibility;
+}
+
+
+/* all */
+::-webkit-input-placeholder { opacity: 1; }
+::-moz-placeholder { opacity: 1; } /* firefox 19+ */
+:-ms-input-placeholder { opacity: 1; } /* ie */
+input:-moz-placeholder { opacity: 1; }
+
+
+.col {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+
+/*--------------------------------------------
+			REUSABLE CODES
+--------------------------------------------*/
+
+
+/* ADD IT TO THE PARENT OF FLOATED ELEMENTS */
+
+.clearfix {
+	zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+
+/* CLEARFIX END */
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+
+/* HEADINGS */
+
+h1 {
+	font-weight: 300;
+}
+
+
+
+/*--------------------------------------------
+			Side Navigation Menu
+--------------------------------------------*/
+
+
+
+.sidebar {
+	background-color: #D35400;
+	width: 240px;
+	height: 100%;
+	display: block;
+	position: absolute;
+	left: -246px;
+	top: 0;
+	transition: left 0.6s cubic-bezier(0.06,-0.11, 0.32, 1.39);
+}
+
+.sidebar.visible {
+	left: -15px;
+}
+
+
+.lucie-icon {
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 80px;
+	margin: 0 auto;
+	background-color: #fff;
+	font-size: 250%;
+	overflow: hidden;
+	font-weight: 700;
+	box-shadow: -2px 2px 20px 2px rgba(0,0,0,0.4);
+	margin-top: 50px;
+	margin-bottom: 10px;
+}
+
+.lucie-icon a {
+	display: block;
+	color: #555;
+	text-decoration: none;
+}
+
+
+.sidebar ul {
+	
+	margin-top: 30px;
+	list-style: none;
+}
+
+.sidebar ul li {
+	background-color: #e45b00;
+}
+
+.sidebar ul li a {
+	color: #fff;
+	font-size: 70%;
+	display: block;
+	padding: 10px;
+	margin-top: 10px;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	transition: all 0.3s ease-in-out;
+}
+
+.sidebar ul li a:hover {
+	background-color: #e45b00;
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
+}
+
+
+.sidebar-btn {
+	display: inline-block;
+	width: 20px;
+	height: 15px;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	margin-top: 20px;
+	right: -50px;
+}
+
+.sidebar-btn span {
+	background-color: #111;
+	height: 2px;
+	margin-bottom: 5px;
+	display: block;
+}
+
+.sidebar-btn span:nth-child(2) {
+	width: 75%;
+}
+
+.sidebar-btn span:nth-child(3) {
+	width: 50%;
+}
+
+
+
+/*--------------------------------------------
+					HEADER
+--------------------------------------------*/
+
+
+header {
+	height: 300px;
+	width: 1140px;
+	margin: 0 auto;
+	background-color: #D35400;
+	color: #fff;
+	position: relative;
+}
+
+.welcome-section {
+	width: 63%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.author,
+.greeting-text {
+	height: 200px;
+	float: left;
+}
+
+.author img {
+	border-radius: 50%;
+	vertical-align: middle;
+	margin-top: -25px;
+	margin-right: 10px;
+}
+
+.author h1 {
+	display: inline-block;
+	font-size: 300%;
+}
+
+.greeting-text {
+	border-left: 1px solid #fff;
+	margin-left: 30px;
+}
+
+.greeting-text span {
+	display: block;
+	padding-top: 178px;
+	padding-left: 10px;
+	font-size: 80%;
+}
+
+
+
+/*--------------------------------------------
+				NAVIGATION MENU
+--------------------------------------------*/
+
+
+.navigation-menu {
+	width: 100%;
+	background-color: #c24d00;
+	text-align: center;
+}
+
+.navigation-list {
+	list-style: none;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.navigation-link {
+	float: left;
+	padding: 20px 30px;
+	text-align: center;
+}
+
+.navigation-link a:link,
+.navigation-link a:visited {
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 80%;
+	border-bottom: 1px solid transparent;
+	transition: border-bottom .5s;
+}
+
+.navigation-link a:hover,
+.navigation-link a:active {
+	border-bottom: 1px solid #fff;
+}
+
+
+
+
+
+/*--------------------------------------------
+				MAIN SEARCH
+--------------------------------------------*/
+
+
+
+.search-box {
+	text-align: center;
+	background-color: #ecf0f1;
+	padding: 30px 0;
+}
+
+.main-search input[name=main-search] {
+	color: #D35400;
+	border: 1px solid #D35400;
+	width: 70%;
+	height: 50px;
+	padding: 0 20px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	outline: none;
+	opacity: 1;
+}
+
+
+.main-search button {
+	height: 50px;
+	width: 114px;
+	background-color: #d35400;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	border: 0;
+	margin-left: -5px;
+	outline: none;
+}
+
+
+
+/*--------------------------------------------
+				EVERYTHING TOP
+--------------------------------------------*/
+
+.top-post, .recent-comment {
+	padding-top: 40px;
+}
+
+/*-----------------
+	TOP POST DIV
+-----------------*/
+
+.top-post {
+	position: relative;
+	width: 100%;
+	padding-bottom: 30px;
+	border-left: 1px solid #ecf0f1;
+	border-right: 1px solid #ecf0f1;
+}
+
+.top-post:before {
+	content: 'Top Post';
+	position: absolute;
+	left: 15px;
+	top: 20px;
+	height: 20px;
+	line-height: 20px;
+	width: 80px;
+	font-weight: 400;
+	border-radius: 5px;
+	background-color: #e4a800;
+	text-align: center;
+	color: #fff;
+	font-size: 60%;
+}
+
+
+.top-badge {
+	width: 40%;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.top-badge i {
+	font-size: 600%;
+	color: #D35400;
+}
+
+.top-badge h2 {
+	font-weight: 400;
+}
+
+
+.top-post-content {
+	width: 60%;
+	float: right;
+	padding: 20px 40px 20px 0px;
+}
+
+
+.top-post-content h3 {
+	font-size: 150%;
+	font-weight: 400;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+}
+
+.top-post-content p {
+	font-size: 70%;
+	text-align: justify;
+	font-weight: 400;
+	border-bottom: 1px solid #D35400;
+	padding-bottom: 25px;
+}
+
+
+.top-post-info {
+	font-size: 50%;
+	font-weight: 400;
+	text-transform: uppercase;
+	padding-bottom: 15px;
+}
+
+.top-post-date a, .top-post-author a {
+	color: #D35400;
+	text-decoration: none;
+}
+
+
+.top-post-comments {
+	padding-top: 15px;
+	font-size: 60%;
+	color: #D35400;
+	font-weight: 400;
+}
+
+.top-post-comments i {
+	color: #D35400;
+	vertical-align: middle;
+}
+
+.top-comment-content {
+	padding-left: 10px;
+	vertical-align: middle;
+}
+
+.top-comment-author {
+	background-color: #fff;
+	padding: 2px 4px;
+	border: 1px solid #D35400;
+	border-radius: 5px;
+	float: right;
+}
+
+.top-comment-author a {
+	color: #D35400;
+	font-size: 90%;
+	text-decoration: none;
+	display: block;
+}
+
+
+/*----------------------
+	RECENT COMMENT DIV
+----------------------*/
+
+
+.recent-comment {
+	position: relative;
+	padding-bottom: 40px;
+	padding-right: 15px;
+	border-right: 1px solid #ecf0f1;
+}
+
+
+.recent-comment:before {
+	content: 'Recent Comments';
+	position: absolute;
+	left: 0;
+	top: 20px;
+	height: 20px;
+	line-height: 20px;
+	width: 130px;
+	font-weight: 400;
+	border-radius: 5px;
+	background-color: #e4a800;
+	text-align: center;
+	color: #fff;
+	font-size: 60%;
+}
+
+
+.recent-comment-inner {
+	width: 90%;
+	margin: 20px auto 0 auto;
+}
+
+.recent-comment-list {
+	list-style: none;
+}
+
+.recent-comment-list li:nth-child(odd) {
+	font-size: 60%;
+	margin-top: 10px;
+	font-weight: 400;
+	text-align: justify;
+}
+
+.recent-comment-list li:first-child {
+	margin-top: 15px;
+}
+
+
+.recent-comment-list li:nth-child(even) {
+	text-align: right;
+	text-transform: capitalize;
+	font-weight: 400;
+	margin-top: 5px;
+	font-size: 60%;
+}
+
+.recent-comment-list li:nth-child(even) i {
+	color: #D35400;
+	font-size: 130%;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+.recent-comment-list li:nth-child(even) a:nth-child(even) {
+	color: #D35400;
+	font-size: 90%;
+	padding: 2px 4px;
+	text-decoration: none;
+	border: 1px solid #D35400;
+	border-radius: 5px;
+	transition: all 200ms ease-in-out;
+}
+
+
+.recent-comment-list li:nth-child(even) a:nth-child(even):hover {
+	color: #fff;
+	background-color: #D35400;
+}
+
+
+
+
+
+/*--------------------------------------------
+					TIMELINE
+--------------------------------------------*/
+
+
+.timeline-container {
+	overflow: hidden;
+	position: relative;
+}
+
+.timeline-title {
+	text-align: center;
+	font: 120%;
+	color: #D35400;
+	width: 200px;
+	height: 125px;
+	background-color: #fff;
+	border: 1px solid #D35400;
+	line-height: 130px;
+}
+
+.timeline-list {
+	list-style: none;
+	width: 1600px;
+	height: 125px;
+	position: absolute;
+	left: 200px;
+	top: 0;
+	z-index: -1;
+	margin-left: 2px;
+}
+
+
+.timeline-list li {
+	width: 200px;
+	height: 125px;
+	background: #000;
+	overflow: hidden;
+	float: left;
+}
+
+.timeline-list li img {
+	width: 100%;
+}
+
+
+
+
+/*--------------------------------------------
+				CATEGORY
+--------------------------------------------*/
+
+
+.category-container {
+	width: 100%;
+	margin: 20px auto;
+	border-right: 1px solid #ecf0f1;
+}
+
+.category-list {
+	width: 95%;
+	list-style: none;
+	border-left: 5px solid #D35400;
+}
+
+.category-list>li {
+	transition: all 200ms ease-in-out;
+	margin-top: 1px;
+}
+
+.category-list>li.active {
+	background-color: #D35400;
+}
+
+.category-list>li.active a {
+	color: #fff;
+}
+
+.category-list>li>a {
+	display: inline-block;
+	width: 80%;
+	text-decoration: none;
+	color: #555;
+	font-size: 80%;
+	transition: all 200ms ease-in-out;
+	padding: 10px 10px 10px 30px;
+}
+
+.category-list>li>i {
+	width: 20%;
+	font-size: 80%;
+	float: right;
+	text-align: center;
+	cursor: pointer;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.category-list>li.active>i {
+	color: #fff;
+	border-left: 1px solid #fff;
+}
+
+.category-list>li:hover i {
+	color: #fff;
+	border-left: 1px solid #fff;
+}
+
+.category-list>li>i {
+	color: #555;
+}
+
+.category-list>li:hover {
+	background-color: #D35400;
+}
+
+.category-list>li:hover a {
+	color: #fff;
+}
+
+
+
+/*--------------------------------------------
+					POSTS
+--------------------------------------------*/
+
+
+
+.post-container {
+	margin: 20px auto;
+}
+
+.large-posts>div {
+	width: 50%;
+	float: left;
+	height: 350px;
+}
+
+.small-posts>div {
+	width: 33.33%;
+	float: left;
+	height: 250px;
+}
+
+.small-posts>div, .large-posts>div {
+	overflow: hidden;
+	position: relative;
+	background: #000;
+}
+
+.large-posts img {
+	height: 350px;
+	width: auto;
+}
+
+.small-posts img {
+	height: 250px;
+	width: auto;
+}
+
+.large-posts img, .small-posts img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	transition: all 300ms ease-in-out;
+}
+
+.post-text {
+	position: absolute;
+	height: 30%;
+	width: 100%;
+	top: 70%;
+	background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+}
+
+.post-text h3 {
+	color: #fff;
+	font-weight: 400;
+	padding: 10px 20px;
+}
+
+.large-posts .post-text h3 {
+	font-size: 90%;
+}
+
+.small-posts .post-text h3 {
+	font-size: 60%;
+	padding-bottom: 0;
+}
+
+.post-text a {
+	text-decoration: none;
+}
+
+
+.read-more {
+	padding-left: 20px;
+}
+
+.read-more .date a, .read-more .read-button {
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 50%;
+	font-weight: 400;
+}
+
+.read-button {
+	margin-left: 20px;
+	background-color: #D35400;
+	padding: 4px 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------
+			EMAIL SUBSCRIPTION
+--------------------------------------------*/
+
+
+
+.subscription-body {
+	background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../img/author-big.jpeg);
+	width: 100%;
+	height: 300px;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+}
+
+.subscription-body h2 {
+	color: #fff;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 10px;
+}
+
+.subscription-body p {
+	text-align: center;
+	color: #fff;
+	font-size: 80%;
+}
+
+input[name=email-subscribe] {
+	background-color: transparent;
+	border: 1px solid #ddd;
+	height: 40px;
+	width: 70%;
+	outline: none;
+	color: #fff;
+	padding: 5px;
+	text-align: center;
+	font-size: 90%;
+	border-radius: 5px;
+
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.subscription-body button {
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+
+	text-transform: uppercase;
+	background-color: #e4a800;
+	padding: 8px 20px;
+	font-size: 70%;
+	font-weight: 400;
+	color: #fff;
+	border: 1px solid #e4a800;
+	cursor: pointer;
+	border-radius: 10px;
+	outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
