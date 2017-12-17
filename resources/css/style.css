@@ -767,22 +767,6 @@ header {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*--------------------------------------------
 			EMAIL SUBSCRIPTION
 --------------------------------------------*/
@@ -853,19 +837,74 @@ input[name=email-subscribe] {
 
 
 
+/*--------------------------------------------
+				FOOTER MENU
+--------------------------------------------*/
 
 
+.footer-body {
+	width: 100%;
+	height: 200px;
+	background-color: #3e3e3e;
+	padding-top: 40px;
+}
 
+.footer-menu, .footer-social {
+	list-style: none;
+}
 
+.footer-menu {
+	float: left;
+	margin-left: 20px;
+}
 
+.footer-social {
+	float: right;
+	margin-right: 20px;
+	margin-top: -6px;
+}
 
+.footer-menu>li, .footer-social>li {
+	float: left;
+}
 
+.footer-menu>li>a, .footer-social>li>a {
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	padding: 10px 15px;
+	transition: all 200ms;
+}
 
+.footer-menu>li>a {
+	font-size: 70%;
+	text-transform: uppercase;
+}
 
+.footer-menu>li>a:hover {
+	color: #D35400;
+}
 
+.footer-social>li:nth-child(1):hover>a{
+	color: #3B5998;
+}
+.footer-social>li:nth-child(2):hover>a{
+	color: #1DA1F2;
+}
+.footer-social>li:nth-child(3):hover>a{
+	color: #DB4437;
+}
+.footer-social>li:nth-child(4):hover>a{
+	color: #C32AA3;
+}
 
-
-
+.copyright {
+	font-size: 70%;
+	color: #fff;
+	padding-top: 90px;
+	text-align: center;
+	text-transform: uppercase;
+}
 
 
 

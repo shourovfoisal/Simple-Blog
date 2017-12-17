@@ -71,7 +71,7 @@ $(document).ready(function() {
 			$(this).parent().addClass('active');
 			var children = $(this).next().children();
 			var len = children.length;						// CALCULATING THE NUMBER OF ELEMENTS THE SUB CATEGORY OWNS
-			var height = (len*40)+15;						// CALCULATING HOW MUCH HEIGHT THE SUB CATEGORY NEEDS IN TOTAL
+			var height = (len*37)+30;						// CALCULATING HOW MUCH HEIGHT THE SUB CATEGORY NEEDS IN TOTAL
 			$(this).next().animate({height: +height+'px'}, 500);
 			$(this).next().addClass('expanded');
 		}
