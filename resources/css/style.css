@@ -351,10 +351,11 @@ header {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
+	margin-top: -15px;
 }
 
 .top-badge i {
-	font-size: 600%;
+	font-size: 750%;
 	color: #D35400;
 }
 
