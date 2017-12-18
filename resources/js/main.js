@@ -56,6 +56,14 @@ $(document).ready(function() {
 		FUNCTIONS FOR SUB CATEGORY
 	*/
 
+	var first_cat = $('.category-list>li:first>ul');
+	var children = first_cat.children();
+	var len = children.length;
+	var height = (len*37)+30;
+	first_cat.animate({height: +height+'px'}, 500);
+	first_cat.addClass('expanded');
+	$('.category-list>li:first>i').css('transform', 'rotateX(180deg)');
+
 	$('.category-list>li>i').on('click',function() {
 		if($(this).next().hasClass('expanded')){
 

@@ -578,6 +578,10 @@ header {
 	border-right: 1px solid #ecf0f1;
 }
 
+.category-container iframe {
+	margin-top: 20px;
+}
+
 .category-list {
 	width: 95%;
 	list-style: none;
@@ -770,7 +774,7 @@ header {
 
 .pagination {
 	display: inline-block;
-	padding-top: 30px;
+	padding: 40px 0px;
 	margin-left: 50%;
 	transform: translateX(-50%);
 }
@@ -789,7 +793,7 @@ header {
 
 .pagination-list {
 	list-style: none;
-	margin: 0 10px;
+	margin: 0 15px;
 }
 
 .pagination-list>li {
