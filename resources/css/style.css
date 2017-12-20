@@ -84,7 +84,7 @@ h1 {
 	width: 240px;
 	height: 100%;
 	display: block;
-	position: absolute;
+	position: fixed;
 	left: -246px;
 	top: 0;
 	transition: left 0.6s cubic-bezier(0.06,-0.11, 0.32, 1.39);
@@ -181,7 +181,7 @@ h1 {
 
 header {
 	height: 300px;
-	width: 1140px;
+	max-width: 1140px;
 	margin: 0 auto;
 	background-color: #D35400;
 	color: #fff;
@@ -773,21 +773,23 @@ header {
 
 
 .pagination {
-	display: inline-block;
 	padding: 40px 0px;
-	margin-left: 50%;
-	transform: translateX(-50%);
+	text-align: center;
 }
 
-.pagination>span, .pagination>ul {
+.pagination-body {
+	display: inline-block;
+}
+
+.pagination-body>span, .pagination-body>ul {
 	float: left;
 }
 
-.pagination span:first-child {
+.pagination-body>span:first-child {
 	margin: 0;
 }
 
-.pagination span:last-child {
+.pagination-body>span:last-child {
 	transform: rotateY(180deg);
 }
 
@@ -831,7 +833,7 @@ header {
 	font-size: 100%;
 }
 
-.pagination span {
+.pagination-body>span {
 	font-size: 90%;
 }
 

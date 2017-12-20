@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
 	// SCRIPT FOR SIDEBAR
+	$('.sidebar').toggleClass('visible');	// To make the menu visible to the user at first
 	$('.sidebar-btn').click(function() {
 		$('.sidebar').toggleClass('visible');
 	});
@@ -87,10 +88,30 @@ $(document).ready(function() {
 
 
 
+	/*
+		FB PLUGIN MODIFICATION - TO MAKE IT RESPONSIVE
+	*/
+
+	$(window).on('resize', function() {
+	   setTimeout(function(){changeFBPagePlugin()}, 500);
+	});
+	 
+	$(window).on('load', function() {
+	   setTimeout(function(){changeFBPagePlugin()}, 1500);
+	});
 
 
-
-
+	changeFBPagePlugin = function () {
+	   //getting parent box width
+	   var container_width = (Number($('.category-container').width()) - Number($('.category-container').css('padding-left').replace("px", ""))).toFixed(0);
+	   if (!isNaN(container_width)) {
+	   	  container_width*=0.95;
+	   	  var url = 'https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width='+container_width.toFixed()+'&height=300&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId';
+	      $(".category-container iframe").attr("width", container_width);
+	      $(".category-container iframe").attr("src", url);
+	   }
+	   
+	}
 
 
 
