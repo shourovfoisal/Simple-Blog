@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	// SCRIPT FOR SIDEBAR
-	$('.sidebar').toggleClass('visible');	// To make the menu visible to the user at first
+	// $('.sidebar').toggleClass('visible');	// To make the menu visible to the user at first
 	$('.sidebar-btn').click(function() {
 		$('.sidebar').toggleClass('visible');
 	});
@@ -113,6 +113,24 @@ $(document).ready(function() {
 	   
 	}
 
+
+	/*
+		CHANGING COLUMN WIDTH OF CATEGORY AND
+		POSTS SECTION FOR RESPONSIVNESS
+	*/
+
+
+	$(window).on('load resize', function mobileViewUpdate() {
+	    var viewportWidth = $(window).width();
+	    if (viewportWidth < 1000) {
+	        $(".posts-section>.row>div:first").removeClass("span-3-of-12").addClass("span-4-of-12");
+	        $(".posts-section>.row>div:last").removeClass("span-9-of-12").addClass("span-8-of-12");
+	    }
+	    if (viewportWidth > 1000) {
+	    	$(".posts-section>.row>div:first").removeClass("span-4-of-12").addClass("span-3-of-12");
+	        $(".posts-section>.row>div:last").removeClass("span-8-of-12").addClass("span-9-of-12");
+	    }
+	});
 
 
 });

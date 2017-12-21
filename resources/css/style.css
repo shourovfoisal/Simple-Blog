@@ -80,7 +80,7 @@ h1 {
 
 
 .sidebar {
-	background-color: #D35400;
+	background-color: #3e3e3e;
 	width: 240px;
 	height: 100%;
 	display: block;
@@ -95,7 +95,7 @@ h1 {
 }
 
 
-.lucie-icon {
+.author-icon {
 	height: 80px;
 	width: 80px;
 	border-radius: 50%;
@@ -108,10 +108,10 @@ h1 {
 	font-weight: 700;
 	box-shadow: -2px 2px 20px 2px rgba(0,0,0,0.4);
 	margin-top: 50px;
-	margin-bottom: 10px;
+	margin-bottom: 50px;
 }
 
-.lucie-icon a {
+.author-icon a {
 	display: block;
 	color: #555;
 	text-decoration: none;
@@ -119,13 +119,11 @@ h1 {
 
 
 .sidebar ul {
-	
-	margin-top: 30px;
 	list-style: none;
 }
 
 .sidebar ul li {
-	background-color: #e45b00;
+	background-color: #4a4a4a;
 }
 
 .sidebar ul li a {
@@ -137,12 +135,6 @@ h1 {
 	text-decoration: none;
 	text-transform: uppercase;
 	text-align: center;
-	transition: all 0.3s ease-in-out;
-}
-
-.sidebar ul li a:hover {
-	background-color: #e45b00;
-	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
 }
 
 
@@ -158,7 +150,7 @@ h1 {
 }
 
 .sidebar-btn span {
-	background-color: #111;
+	background-color: #ababab;
 	height: 2px;
 	margin-bottom: 5px;
 	display: block;
@@ -210,6 +202,14 @@ header {
 .author h1 {
 	display: inline-block;
 	font-size: 300%;
+	position: relative;
+}
+
+.author span {
+	display: none;
+	text-align: right;
+	font-size: 80%;
+	margin-right: 40px;
 }
 
 .greeting-text {
@@ -311,6 +311,11 @@ header {
 /*--------------------------------------------
 				EVERYTHING TOP
 --------------------------------------------*/
+.everything-top .row{
+	border-left: 1px solid #ecf0f1;
+	border-right: 1px solid #ecf0f1;
+}
+
 
 .top-post, .recent-comment {
 	padding-top: 40px;
@@ -324,8 +329,6 @@ header {
 	position: relative;
 	width: 100%;
 	padding-bottom: 30px;
-	border-left: 1px solid #ecf0f1;
-	border-right: 1px solid #ecf0f1;
 }
 
 .top-post:before {
@@ -344,36 +347,69 @@ header {
 	font-size: 60%;
 }
 
+.top-post-inner {
+	padding-top: 10px;
+}
 
-.top-badge {
-	width: 40%;
+.top-post-inner h2, .recent-comment-inner h2 {
+	display: none;
+	text-transform: uppercase;
+	font-size: 180%;
+	font-weight: 300;
 	text-align: center;
+	padding-bottom: 10px;
+	margin-bottom: 40px;
+	position: relative;
+}
+
+.top-post-inner h2:after, .recent-comment-inner h2:after {
+	content: '';
 	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	margin-top: -15px;
+	background-color: #D35400;
+	height: 2px;
+	left: 50%;
+	top: 100%;
+	transform: translateX(-50%);
 }
 
-.top-badge i {
-	font-size: 750%;
-	color: #D35400;
+.top-post-inner h2:after {
+	width: 200px;
 }
 
-.top-badge h2 {
-	font-weight: 400;
+.recent-comment-inner h2:after {
+	width: 400px;
+}
+
+
+.top-post-image {
+	width: 40%;
+	padding-left: 2.5%;
+	height: 221px;
+	overflow: hidden;
+	float: left;
+	text-align: center;
+	padding-top: 9px;
+}
+
+.top-post-image img {
+	height: 100%;
 }
 
 
 .top-post-content {
 	width: 60%;
 	float: right;
-	padding: 20px 40px 20px 0px;
+	padding: 0px 20px;
+}
+
+.top-post-content .top-post-image {
+	display: none;
 }
 
 
 .top-post-content h3 {
 	font-size: 150%;
-	font-weight: 400;
+	font-weight: 300;
 	padding-bottom: 10px;
 	text-transform: uppercase;
 }
@@ -441,15 +477,14 @@ header {
 .recent-comment {
 	position: relative;
 	padding-bottom: 40px;
-	padding-right: 15px;
-	border-right: 1px solid #ecf0f1;
+	border-left: 1px solid #ecf0f1;
 }
 
 
 .recent-comment:before {
 	content: 'Recent Comments';
 	position: absolute;
-	left: 0;
+	left: 15px;
 	top: 20px;
 	height: 20px;
 	line-height: 20px;
@@ -474,7 +509,6 @@ header {
 
 .recent-comment-list li:nth-child(odd) {
 	font-size: 60%;
-	margin-top: 10px;
 	font-weight: 400;
 	text-align: justify;
 }
@@ -490,6 +524,7 @@ header {
 	font-weight: 400;
 	margin-top: 5px;
 	font-size: 60%;
+	padding: 10px 0;
 }
 
 .recent-comment-list li:nth-child(even) i {
@@ -665,8 +700,7 @@ header {
 	text-decoration: none;
 	font-size: 70%;
 	color: #D35400;
-	margin-left: 10px;
-	padding: 10px 20px;
+	padding: 10px 30px;
 	font-weight: 400;
 }
 
@@ -702,7 +736,6 @@ header {
 .small-posts>div, .large-posts>div {
 	overflow: hidden;
 	position: relative;
-	background: #000;
 }
 
 .large-posts img {
@@ -922,31 +955,31 @@ input[name=email-subscribe] {
 
 .footer-body {
 	width: 100%;
-	height: 200px;
+	min-height: 200px;
 	background-color: #3e3e3e;
 	padding-top: 40px;
 }
 
-.footer-menu, .footer-social {
+.footer-menu-list, .footer-social-list {
 	list-style: none;
 }
 
-.footer-menu {
+.footer-menu-list {
 	float: left;
 	margin-left: 20px;
 }
 
-.footer-social {
+.footer-social-list {
 	float: right;
 	margin-right: 20px;
 	margin-top: -6px;
 }
 
-.footer-menu>li, .footer-social>li {
+.footer-menu-list>li, .footer-social-list>li {
 	float: left;
 }
 
-.footer-menu>li>a, .footer-social>li>a {
+.footer-menu-list>li>a, .footer-social-list>li>a {
 	text-decoration: none;
 	color: #fff;
 	display: block;
@@ -954,25 +987,25 @@ input[name=email-subscribe] {
 	transition: all 200ms;
 }
 
-.footer-menu>li>a {
+.footer-menu-list>li>a {
 	font-size: 70%;
 	text-transform: uppercase;
 }
 
-.footer-menu>li>a:hover {
+.footer-menu-list>li>a:hover {
 	color: #D35400;
 }
 
-.footer-social>li:nth-child(1):hover>a{
+.footer-social-list>li:nth-child(1):hover>a{
 	color: #3B5998;
 }
-.footer-social>li:nth-child(2):hover>a{
+.footer-social-list>li:nth-child(2):hover>a{
 	color: #1DA1F2;
 }
-.footer-social>li:nth-child(3):hover>a{
+.footer-social-list>li:nth-child(3):hover>a{
 	color: #DB4437;
 }
-.footer-social>li:nth-child(4):hover>a{
+.footer-social-list>li:nth-child(4):hover>a{
 	color: #C32AA3;
 }
 

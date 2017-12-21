@@ -19,6 +19,7 @@
 			<div class="author">
 				<img src="resources/img/author.jpg">
 				<h1>Lucy's Blog</h1>
+				<span>Hi there! Welcome to my blog!</span>
 			</div>
 			<div class="greeting-text">
 				<span>Hi there! Welcome to my blog!</span>
@@ -53,22 +54,27 @@
 		<div class="row">
 			<div class="col span-6-of-10">
 				<div class="top-post clearfix">
-					<div class="top-badge">
-						<i class="ion-ribbon-b"></i>
+					<div class="top-post-inner clearfix">
 						<h2>Top post</h2>
-					</div>
-					<div class="top-post-content">
-						<h3>This is the post title</h3>
-						<div class="top-post-info">
-							On <span class="top-post-date"><a href="#">28 Nov 2017</a></span>
-							By <span class="top-post-author"><a href="#">Lucie Jones</a></span>
+						<div class="top-post-image">
+							<img src="resources/img/post/1.jpeg">
 						</div>
-						<p>Aorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+						<div class="top-post-content">
+							<h3>Lorem ipsum dolor sit</h3>
+							<div class="top-post-info">
+								On <span class="top-post-date"><a href="#">28 Nov 2017</a></span>
+								By <span class="top-post-author"><a href="#">Lucie Jones</a></span>
+							</div>
+							<div class="top-post-image">
+								<img src="resources/img/post/1.jpeg">
+							</div>
+							<p>Aorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
 
-						<div class="top-post-comments clearfix">
-							<i class="ion-quote"></i>
-							<span class="top-comment-content">This is a sample one line contracted comment...</span>
-							<span class="top-comment-author"><a href="#">Martin Luther</a></span>
+							<div class="top-post-comments clearfix">
+								<i class="ion-quote"></i>
+								<span class="top-comment-content">This is a sample one line contracted comment...</span>
+								<span class="top-comment-author"><a href="#">Martin Luther</a></span>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -76,12 +82,13 @@
 			<div class="col span-4-of-10">
 				<div class="recent-comment">
 					<div class="recent-comment-inner">
+						<h2>Recent Comments</h2>
 						<ul class="recent-comment-list">
-							<li>&mdash;&ensp;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
+							<li>&mdash;&ensp;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</li>
 							<li><a href="#"><i class="ion-chatbox recent-comment-icons"></i></a> by&ensp;<a href="#">Dwayne Johnson</a></li>
-							<li>&mdash;&ensp;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
+							<li>&mdash;&ensp;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</li>
 							<li><a href="#"><i class="ion-chatbox recent-comment-icons"></i></a> by&ensp;<a href="#">Joseph Gordon</a></li>
-							<li>&mdash;&ensp;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
+							<li>&mdash;&ensp;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</li>
 							<li><a href="#"><i class="ion-chatbox recent-comment-icons"></i></a> by&ensp;<a href="#">Donald Trump</a></li>
 						</ul>
 					</div>
@@ -261,19 +268,24 @@
 	<footer>
 		<div class="row">
 			<div class="footer-body clearfix">
-				<ul class="footer-menu clearfix">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="#">About Me</a></li>
-					<li><a href="#">Contact Me</a></li>
-					<li><a href="#">Link 1</a></li>
-					<li><a href="#">Link 2</a></li>
-				</ul>
-				<ul class="footer-social clearfix">
-					<li><a href="#"><i class="ion-social-facebook"></i></a></li>
-					<li><a href="#"><i class="ion-social-twitter"></i></a></li>
-					<li><a href="#"><i class="ion-social-googleplus"></i></a></li>
-					<li><a href="#"><i class="ion-social-instagram"></i></a></li>
-				</ul>
+				<div class="footer-menu">
+					<ul class="footer-menu-list clearfix">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="#">About Me</a></li>
+						<li><a href="#">Contact Me</a></li>
+						<li><a href="#">Link 1</a></li>
+						<li><a href="#">Link 2</a></li>
+					</ul>
+				</div>
+				<div class="footer-social">
+					<ul class="footer-social-list clearfix">
+						<li><a href="#"><i class="ion-social-facebook"></i></a></li>
+						<li><a href="#"><i class="ion-social-twitter"></i></a></li>
+						<li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+						<li><a href="#"><i class="ion-social-instagram"></i></a></li>
+					</ul>
+				</div>
+				
 				<div class="copyright">
 					Copyright &copy;2017 Shourov Foisal
 				</div>
@@ -285,7 +297,7 @@
 
 	<div class="sidebar">
 
-		<div class="lucie-icon">
+		<div class="author-icon">
 			<a href="#">L</a>
 		</div>
 
