@@ -171,6 +171,10 @@
 		display: none;
 	}
 
+	.navigation-link {
+	    padding: 20px 20px;
+	}
+
 	.search-box {
 	    padding: 25px 0;
 	}
@@ -274,6 +278,44 @@
 
 @media only screen and (max-width: 520px) {
 
+	header {
+	    height: auto;
+	}
+
+	.author {
+	    height: auto;
+	    float: none;
+	    padding-bottom: 20px;
+	}
+
+	.author img {
+	    vertical-align: 0px; 
+	    margin-right: 0px; 
+	    display: block;
+	    margin: 0 auto;
+	}
+
+	.author h1 {
+	    padding: 0px 10px 5px 10px;
+	    font-size: 200%;
+	    margin: 5px auto;
+	}
+
+	.author span {
+	    margin-top: 0px;
+	    text-align: center;
+	    font-size: 80%;
+	    margin-right: 0px;
+	}
+
+	.navigation-link {
+	    float: none;
+	    padding: 15px 15px 0px 15px;
+	}
+	.navigation-list>li:last-child {
+		padding-bottom: 15px;
+	}
+
 	.search-box {
 		padding: 20px 0;
 	}
@@ -285,11 +327,13 @@
 		border-bottom-left-radius: 5px;
 		outline: none;
 		opacity: 1;
+		font-size: 80%;
 	}
 
 	.main-search button {
 		height: 40px;
 		width: 100px;
+		font-size: 80%;
 	}
 
 	.top-post-inner h2 {
