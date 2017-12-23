@@ -413,7 +413,7 @@
 	}
 
 	.pagination-list .pagination-btn.active {
-		box-shadow: 0px 0px 3px 3px rgba(85,85,85,0.7);
+		/*box-shadow: 0px 0px 3px 3px rgba(85,85,85,0.7);*/
 		font-size: 70%;
 	}
 
